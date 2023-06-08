@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registro y Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+      margin: 20px;
+    }
+    label, input {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="submit"] {
+      margin-top: 10px;
+    }
+    #message {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Registro y Login</h1>
+
+  <h2>Crear cuenta</h2>
+  <form id="signupForm">
+    <label for="signupEmail">Email:</label>
+    <input type="email" id="signupEmail" required>
+
+    <label for="signupPassword">Contraseña:</label>
+    <input type="password" id="signupPassword" required>
+
+    <input type="submit" value="Crear cuenta">
+  </form>
+
+  <h2>Iniciar sesión</h2>
+  <form id="loginForm">
+    <label for="loginEmail">Email:</label>
+    <input type="email" id="loginEmail" required>
+
+    <label for="loginPassword">Contraseña:</label>
+    <input type="password" id="loginPassword" required>
+
+    <input type="submit" value="Iniciar sesión">
+  </form>
+
+  <div id="message"></div>
+
+  <script>
+    // Obtener referencias a los formularios y al elemento de mensaje
+    var signupForm = document.getElementById('signupForm');
+    var loginForm = document.getElementById('loginForm');
+    var messageElement = document.getElementById('message');
+
+    // Evento para el formulario de registro
+    signupForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      var email = document.getElementById('signupEmail').value;
+      var password = document.getElementById('signupPassword').value;
+
+      // Aquí puedes agregar la lógica para crear una cuenta en la base de datos o realizar otras acciones necesarias
+      // Por ahora, simplemente mostraremos un mensaje de éxito en el formulario
+      messageElement.textContent = 'Cuenta creada con éxito';
+    });
+
+    // Evento para el formulario de inicio de sesión
+    loginForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      var email = document.getElementById('loginEmail').value;
+      var password = document.getElementById('loginPassword').value;
+
+      // Aquí puedes agregar la lógica para verificar las credenciales en la base de datos o realizar otras acciones necesarias
+      // Por ahora, simplemente mostraremos un mensaje de éxito en el formulario
+      messageElement.textContent = 'Inicio de sesión exitoso';
+    });
+  </script>
+</body>
+</html>
