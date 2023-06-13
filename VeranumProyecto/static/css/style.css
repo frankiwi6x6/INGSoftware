@@ -1,0 +1,48 @@
+.imagen-habitacion {
+    height: 100%;
+    width: 300px;
+}
+
+.precio {
+    font-weight: 800;
+}
+
+.reserva button {
+    background-color: #FF8750;
+    color: white;
+    font-weight: 500;
+}
+
+.reserva button:hover {
+    background-color: #643520;
+    color: white;
+    font-weight: 500;
+}
+
+.card .media img {
+    width: 300px; /* Cambia el valor según tus preferencias */
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.horario p{
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.abierto24{
+    font-style: oblique;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.foto-icono {
+    width: 48px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+

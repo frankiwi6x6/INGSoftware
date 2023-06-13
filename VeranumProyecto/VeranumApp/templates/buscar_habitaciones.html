@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Veranum Hoteles - Reserva{% endblock %}
+
+{% block content %}
+<div class="buscar-habitaciones">
+    <form method="POST" action="{% url 'resultados_habitaciones' %}">
+
+        {% csrf_token %}
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="fecha-entrada">Fecha de entrada:</label>
+                <input type="date" class="form-control datepicker" name="fecha-entrada" id="fecha-entrada">
+            </div>
+            <div class="offset-1 col-md-4 mb-3">
+                <label for="fecha-salida">Fecha de salida:</label>
+                <input type="date" class="form-control datepicker" name="fecha-salida" id="fecha-salida">
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-4 mb-3">
+                <label for="sucursal">Hotel:</label>
+                <br>
+                <select name="sucursal" class="form-control">
+                    {% for hotel in hoteles %}
+                    <option value="{{ hotel.idHotel }}">{{ hotel.nombre }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="offset-1 col-md-4 mb-3">
+                <label for="personas">Número de personas:</label>
+                <input type="number" class="form-control" name="personas" id="personas">
+            </div>
+        </div>
+        <div >
+            <button type="submit" class="col-md-9 mt-3 btn btn-primary">RESERVAR HABITACIÓN AHORA</button>
+        </div>
+    </form>
+</div>
+
+
+    {% endblock %}
