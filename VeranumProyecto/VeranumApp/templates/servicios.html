@@ -1,5 +1,20 @@
 {% extends 'base.html' %}
 
+{% block navbar %}
+                    
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'buscar_habitaciones' %}">Inicio</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'acerca_de' %}">Acerca de</a>
+</li>
+<li class="nav-item active">
+    <a class="nav-link" href="{% url 'servicios' %}">Servicios</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="#">Contacto</a>
+</li>
+{% endblock %}
 {% block content %}
 
 <h1>Servicios</h1>

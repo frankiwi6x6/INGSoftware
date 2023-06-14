@@ -24,3 +24,7 @@ def resultados_habitaciones(request):
 def servicios_subservicios(request):
     servicios = ServicioHoteleria.objects.all()
     return render(request, 'servicios.html', {'servicios': servicios})
+
+
+def acerca_de(request):
+    return render(request,'acerca_de.html',{})
