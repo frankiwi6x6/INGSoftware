@@ -26,7 +26,7 @@
                             <img class="foto-icono" src="{% static 'img/icono.png' %}" alt="Icono de la empresa">
                         </td>
                         <td>
-                            eranum Hotel</td>
+                            Veranum Hotel</td>
 
                     </tr>
                 </table>
@@ -36,12 +36,11 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    {% block navbar %}
-                    {% endblock %}
-                </ul>
+                {% block navbar %}
+                
+                {% endblock %}
             </div>
-             
+
         </nav>
         {% endblock %}
          

@@ -28,3 +28,6 @@ def servicios_subservicios(request):
 
 def acerca_de(request):
     return render(request,'acerca_de.html',{})
+
+def cuenta(request):
+    return render(request,'cuenta.html',{})
